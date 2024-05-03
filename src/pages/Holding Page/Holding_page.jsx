@@ -3,6 +3,7 @@ import "./holding_page.css"
 import logo from "../../assets/images/logo.png"
 import cooking from "../../assets/images/cooking_items.png"
 import Logo from "./holding_array"
+import background from "../../assets/images/background.png"
 
 function Holding() {
   return (
@@ -52,6 +53,36 @@ function Holding() {
             )
           })}
         </div>
+      </div>
+      <div className="form_background">
+        <img src={background} className="background_image"></img>
+        <form>
+          <label className="form_heading">
+            {" "}
+            Be the First to Know When we Launch!
+          </label>
+          <div className="form_div">
+            <label> First Name</label>
+            <input />
+          </div>
+          <div className="form_div">
+            <label> Last Name</label>
+            <input />
+          </div>
+          <div className="form_div">
+            <div className=""></div>
+            <label> Email Address</label>
+            <input />
+          </div>
+          <div className="form_div">
+            <label> Country </label>
+            <input />
+          </div>
+          <div className="form_div">
+            <label> Phone Number</label>
+            <input />
+          </div>
+        </form>
       </div>
     </>
   )
