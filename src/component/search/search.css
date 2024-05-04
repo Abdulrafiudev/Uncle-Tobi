@@ -55,6 +55,7 @@
   border-radius: 100%;
   justify-content: center;
   position: relative;
+  cursor: pointer;
 }
 .quantity_container {
   display: flex;
