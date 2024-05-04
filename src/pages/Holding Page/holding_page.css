@@ -99,7 +99,7 @@
   justify-content: center;
   height: 20vh;
   width: 100%;
-  gap: 20px;
+  gap: 24px;
   margin-top: 50px;
   margin-bottom: 50px;
 }
@@ -109,10 +109,12 @@
 .brand_logo {
   display: flex;
   gap: 40px;
+  align-items: center;
+  justify-content: center;
 }
 .form_background {
   width: 100%;
-  height: 100vh;
+  height: 150vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -127,7 +129,7 @@
 form {
   background-color: white;
   position: absolute;
-  top: 100px;
+  top: 90px;
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -150,4 +152,50 @@ input {
   padding: 5px;
   border-radius: 8px;
   border: 1px solid #909090;
+}
+.phone_div {
+  position: relative;
+}
+.form_button {
+}
+.form_main_button {
+  width: 100%;
+  background: #a4c61f;
+  color: white;
+
+  padding: 12px 15px;
+  border: 1px solid #a4c61f;
+  cursor: pointer;
+
+  border-radius: 60px;
+}
+.checkbox_div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.checkbox_div span {
+  font-size: 12px;
+}
+.check {
+  appearance: none;
+  height: 13px;
+  width: 13px;
+  border: 1px solid #a4c61f;
+  border-radius: 3px;
+}
+.check:checked {
+  background-color: #a4c61f;
+}
+hr {
+  width: 100%;
+  color: #0d1f2e1a;
+  margin-bottom: 20px;
+}
+.copyright_container {
+  padding-bottom: 25px;
+}
+.copyright {
+  color: #0d1f2e;
+  font-size: 14px;
 }

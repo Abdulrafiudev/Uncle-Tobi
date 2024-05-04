@@ -19,23 +19,23 @@ let Logo = [
   },
   {
     img: third_logo,
-    height: "50px",
-    width: "50px",
+    height: "80px",
+    width: "80px",
   },
   {
     img: fourth_logo,
-    height: "50px",
-    width: "50px",
+    height: "80px",
+    width: "80px",
   },
   {
     img: fifth_logo,
     height: "50px",
-    width: "50px",
+    width: "130px",
   },
   {
     img: sixth_logo,
-    height: "50px",
-    width: "100px",
+    height: "80px",
+    width: "80px",
   },
 ]
 

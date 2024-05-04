@@ -6,6 +6,7 @@ import Logo from "./holding_array"
 import background from "../../assets/images/background.png"
 
 function Holding() {
+  let year = new Date().getFullYear()
   return (
     <>
       <div className="header">
@@ -29,7 +30,7 @@ function Holding() {
               <br></br>
               we fully Launch
             </span>
-            <button className="hero_button"> stay informed </button>
+            <button className="hero_button"> Stay informed </button>
           </div>
           <div className="right_hero_section">
             <img src={cooking} className="cooking_items"></img>
@@ -63,26 +64,41 @@ function Holding() {
           </label>
           <div className="form_div">
             <label> First Name</label>
-            <input />
+            <input type="text" required />
           </div>
           <div className="form_div">
             <label> Last Name</label>
-            <input />
+            <input type="text" required />
           </div>
           <div className="form_div">
             <div className=""></div>
             <label> Email Address</label>
-            <input />
+            <input type="email" required />
           </div>
           <div className="form_div">
             <label> Country </label>
-            <input />
+            <input type="text" required />
           </div>
-          <div className="form_div">
+          <div className="form_div phone_div">
             <label> Phone Number</label>
-            <input />
+            <input type="number" required />
+          </div>
+          <div className="checkbox_div">
+            <input type="checkbox" className="check" />
+            <span> Send me regular newsletter and product updates</span>
+          </div>
+          <div className="form_button">
+            <input
+              type="submit"
+              value="Stay informed"
+              className="form_main_button"
+            />
           </div>
         </form>
+        <hr></hr>
+        <div className="copyright_container">
+          <span className="copyright"> Copyright {year} UncleTobi.shop </span>
+        </div>
       </div>
     </>
   )
