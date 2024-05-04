@@ -4,8 +4,37 @@ import Search from "../../component/search/search"
 import "./homepage.css"
 import vegetable from "../../assets/images/vegetable.png"
 import baby from "../../assets/images/baby.jpg"
+import { Swiper, SwiperSlide } from "swiper/react"
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import "swiper/css/scrollbar"
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules"
 
 function Home() {
+  let items = [
+    {
+      name: "Fresh Foods",
+    },
+    {
+      name: "Bakery",
+    },
+    {
+      name: "Frozen Foods",
+    },
+    {
+      name: "Treats & Snacks",
+    },
+    {
+      name: "Food Cupboard",
+    },
+    {
+      name: "Drinks",
+    },
+    {
+      name: "Kitchen",
+    },
+  ]
   return (
     <>
       <Header />
@@ -67,6 +96,29 @@ function Home() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="category_container">
+        <span className="explore"> Explore Categories </span>
+        <Swiper
+          // install Swiper modules
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={10}
+          slidesPerView={5}
+          pagination
+          onSwiper={swiper => console.log(swiper)}
+          onSlideChange={() => console.log("slide change")}
+        >
+          {items.map((item, index) => {
+            return (
+              <SwiperSlide>
+                <div className="item_container">
+                  <span> {item.name} </span>
+                </div>
+              </SwiperSlide>
+            )
+          })}
+        </Swiper>
       </div>
     </>
   )
