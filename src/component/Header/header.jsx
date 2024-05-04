@@ -23,14 +23,21 @@ function Header() {
           </ul>
         </div>
         <div className="homepage_right_section">
-          <div className="country_div">
-            <img src={uk} className="uk_image"></img>
-            <span className="uk_text"> Shop in UK </span>
+          <div className="bigger_country_div">
+            <div className="country_div">
+              <img src={uk} className="uk_image"></img>
+              <a className="uk_text"> Shop in UK </a>
+            </div>
+            <div className="green_line"></div>
           </div>
-          <div className="country_div">
-            <img src={nig} className="nig_image"></img>
-            <span className="nig_text"> Shop in Nigeria </span>
+          <div className="bigger_country_div">
+            <div className="country_div">
+              <img src={nig} className="nig_image"></img>
+              <a className="nig_text"> Shop in Nigeria </a>
+            </div>
+            <div className="green_line"></div>
           </div>
+
           <div>
             <a className="account_button"> My Account </a>
           </div>
