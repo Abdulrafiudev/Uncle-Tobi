@@ -156,8 +156,7 @@ input {
 .phone_div {
   position: relative;
 }
-.form_button {
-}
+
 .form_main_button {
   width: 100%;
   background: #a4c61f;
@@ -193,7 +192,7 @@ hr {
   margin-bottom: 20px;
 }
 .copyright_container {
-  padding-bottom: 25px;
+  padding-bottom: 30px;
 }
 .copyright {
   color: #0d1f2e;

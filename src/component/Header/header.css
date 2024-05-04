@@ -1,0 +1,97 @@
+.homepage_header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10vh;
+
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 13px;
+}
+.homepage_left_section {
+  display: flex;
+  flex: 2;
+
+  align-items: center;
+  margin-left: 50px;
+  gap: 20px;
+}
+.uncle_tobi {
+  height: 40px;
+  width: 150px;
+  cursor: pointer;
+}
+ul {
+  display: flex;
+  list-style: none;
+  margin-left: 25px;
+  cursor: pointer;
+}
+li {
+  color: #0d1f2e;
+  font-size: 14px;
+}
+.vertical_line {
+  border-left: 2px solid #1f303f4d;
+  height: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.homepage_right_section {
+  display: flex;
+  flex: 1;
+
+  align-items: center;
+  gap: 18px;
+}
+.country_div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.uk_image,
+.nig_image {
+  height: 20px;
+  width: 20px;
+}
+.country_div span {
+  font-size: 12px;
+  color: #0d1f2e;
+  opacity: 0.5;
+}
+.uk_text:after {
+  content: "";
+  display: block;
+  width: 100%;
+  width: 2px;
+  margin-top: 5px;
+  background-color: transparent;
+  transition: background-color 0.2s ease-in-out;
+}
+.nig:after {
+  content: "";
+  display: block;
+  width: 100%;
+  width: 2px;
+  margin-top: 5px;
+  background-color: transparent;
+  transition: background-color 0.2s ease-in-out;
+}
+.uk_text:hover:after,
+.uk_text:active:after,
+.nig_text:hover:after,
+.nig_text:active:after {
+  background-color: #a4c61f;
+  opacity: 1;
+}
+.account_button {
+  background: #a4c61f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 52px;
+  border: 1px solid #a4c61f;
+  cursor: pointer;
+}
