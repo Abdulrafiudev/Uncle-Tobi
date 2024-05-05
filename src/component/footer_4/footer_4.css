@@ -1,0 +1,155 @@
+.footer_4_container {
+  width: 100%;
+  height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 150px;
+}
+.first_flex {
+  width: 100%;
+  height: 10vh;
+
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.first_flex_span_1 {
+  color: #0d1f2e;
+  font-size: 24px;
+}
+.first_flex_span_2 {
+  color: #788087;
+  font-size: 14px;
+}
+.second_flex {
+  width: 100%;
+  height: 10vh;
+
+  margin-left: 50px;
+  display: flex;
+
+  align-items: center;
+  gap: 5px;
+}
+.second_flex_input_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.second_flex_input {
+  height: 30px;
+  width: 300px;
+  border-radius: 400px;
+  border: 1px solid #1f303f1a;
+  padding-left: 43px;
+  display: flex;
+  align-items: center;
+}
+.second_flex_input_container .envelope {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  transform: scale(0.8);
+}
+.second_flex_button {
+  background-color: #a4c61f;
+  padding: 10px 20px;
+  border-radius: 52px;
+  width: 80px;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+.main_footer {
+  width: 95%;
+  height: 40vh;
+  background-color: white;
+  margin-left: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 200px;
+  margin-top: 30px;
+}
+.first_main,
+.second_main,
+.third_main,
+.fourth_main {
+  display: flex;
+  flex-direction: column;
+}
+.first_main span {
+  margin-top: 30px;
+  color: #788087;
+  font-size: 14px;
+  line-height: 18px;
+}
+.icons_container {
+  display: flex;
+  gap: 20px;
+}
+
+.second_main span,
+.third_main span,
+.fourth_main span {
+  color: #0d1f2e;
+  font-size: 24px;
+}
+.second_main ul,
+.third_main ul,
+.fourth_main ul {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  align-items: start;
+
+  margin-left: 0;
+  gap: 15px;
+}
+.second_main ul li,
+.third_main ul li,
+.fourth_main ul li {
+  color: #788087;
+  font-size: 14px;
+}
+.footer_4_container hr {
+  width: 95%;
+  margin-left: 50px;
+  margin-top: 30px;
+  color: #788087;
+}
+.footer_contact {
+  margin-top: -15px;
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  align-items: center;
+  justify-content: center;
+}
+.footer_contact_container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.footer_email,
+.footer_tel,
+.footer_company {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.footer_contact_container span {
+  color: #657e00;
+  font-size: 14px;
+}
+.footer_email *,
+.footer_tel * {
+  color: #657e00;
+}

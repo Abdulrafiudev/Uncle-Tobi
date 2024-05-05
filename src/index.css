@@ -7,3 +7,6 @@
   font-family: Gotham;
   src: url(./assets/font/Gotham\ Book.otf);
 }
+body {
+  overflow-x: hidden;
+}

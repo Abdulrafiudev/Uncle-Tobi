@@ -17,6 +17,7 @@ import { fresh_food } from "../../component/products/cart"
 import Footer_1 from "../../component/footer_1/footer_1"
 import Footer_2 from "../../component/footer_2/footer_2"
 import Footer_3 from "../../component/footer_3/footer_3"
+import Footer_4 from "../../component/footer_4/footer_4"
 
 function Home() {
   let items = [
@@ -149,6 +150,7 @@ function Home() {
       <Footer_1 />
       <Footer_2 />
       <Footer_3 />
+      <Footer_4 />
     </>
   )
 }
