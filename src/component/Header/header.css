@@ -98,3 +98,20 @@ li {
   cursor: pointer;
   margin-right: 50px;
 }
+.user_container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-right: 50px;
+}
+.user_image {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.user_container span {
+  color: #0d1f2e;
+  font-size: 16px;
+  cursor: pointer;
+}

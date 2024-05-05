@@ -4,7 +4,7 @@ import { UilShoppingCart } from "@iconscout/react-unicons"
 import { UilEnvelope } from "@iconscout/react-unicons"
 import { UilPhone } from "@iconscout/react-unicons"
 
-function Search() {
+function Search(props) {
   return (
     <>
       <div className="search_header">
@@ -13,6 +13,7 @@ function Search() {
             type="search"
             placeholder="Search for product"
             className="search_input"
+            onChange={props.handle_change}
           />
         </div>
         <div className="right_search">
@@ -32,6 +33,15 @@ function Search() {
           </div>
         </div>
       </div>
+      {props.search_result && (
+        <div className="search_result">
+          <span className="search_result_span_1">
+            {" "}
+            Showing Search result for Pepper{" "}
+          </span>
+          <span className="search_result_span_2"> 9 Products Found </span>
+        </div>
+      )}
     </>
   )
 }

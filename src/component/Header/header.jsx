@@ -1,10 +1,14 @@
-import React from "react"
+import React, { useState } from "react"
 import "./header.css"
 import Logo from "../../assets/images/logo.png"
 import uk from "../../assets/images/uk_image.png"
 import nig from "../../assets/images/nig_image.png"
+import user_img from "../../assets/images/user_image.png"
 
-function Header() {
+function Header(props) {
+  // Handling showing user image when he is logged in
+  let [logged, set_logged] = useState(props.logged_in)
+
   return (
     <>
       <div className="homepage_header">
@@ -37,10 +41,16 @@ function Header() {
             </div>
             <div className="green_line"></div>
           </div>
-
-          <div>
-            <a className="account_button"> My Account </a>
-          </div>
+          {logged ? (
+            <div className="user_container">
+              <img src={user_img} className="user_image"></img>
+              <span> Hi Mike </span>
+            </div>
+          ) : (
+            <div>
+              <a className="account_button"> My Account </a>
+            </div>
+          )}
         </div>
       </div>
     </>

@@ -7,7 +7,12 @@ function Products(props) {
   let label = [{ name: "Label" }, { name: "Label" }, { name: "Label" }]
   return (
     <>
-      <div className="products_container">
+      <div
+        className="products_container"
+        style={{
+          marginTop: props.logged_in && "-20px",
+        }}
+      >
         <div className="top_product_container">
           <div className="top_product_heading">
             <div className="left_product_heading">
@@ -17,7 +22,10 @@ function Products(props) {
               <span className="see">{props.see_all} </span>
             </div>
           </div>
-          <div className="grid">
+          <div
+            className="grid"
+            style={{ gridTemplateColumns: props.logged_in && "1fr 1fr 1fr" }}
+          >
             {props.top_product.map((product, index) => {
               return (
                 <div className="product_container">

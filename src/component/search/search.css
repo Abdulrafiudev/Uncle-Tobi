@@ -76,3 +76,20 @@
 .cart_cointainer * {
   color: #a4c61f;
 }
+.search_result {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  gap: 20px;
+  align-items: center;
+  margin-left: 50px;
+}
+.search_result_span_1 {
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+}
+.search_result_span_2 {
+  color: #a4c61f;
+  font-size: 12px;
+}
