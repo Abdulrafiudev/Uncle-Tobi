@@ -10,6 +10,10 @@ import "swiper/css/navigation"
 import "swiper/css/pagination"
 import "swiper/css/scrollbar"
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules"
+import Products from "../../component/products/products"
+import { top_product } from "../../component/products/cart"
+import { kitchen_products } from "../../component/products/cart"
+import { fresh_food } from "../../component/products/cart"
 
 function Home() {
   let items = [
@@ -119,6 +123,25 @@ function Home() {
             )
           })}
         </Swiper>
+      </div>
+      <Products
+        top_product={top_product}
+        name={"Top Products"}
+        see_all={"See All Products"}
+      />
+      <div className="kitchen">
+        <Products
+          top_product={kitchen_products}
+          name={"Kitchen Products"}
+          see_all={"See All Products"}
+        />
+      </div>
+      <div className="fresh_food">
+        <Products
+          top_product={fresh_food}
+          name={"Fresh Foods"}
+          see_all={"See All "}
+        />
       </div>
     </>
   )

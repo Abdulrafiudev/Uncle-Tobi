@@ -3,7 +3,7 @@
   height: 70vh;
   justify-content: space-between;
   margin-top: 30px;
-  width: 90%;
+  width: 91.5%;
 }
 .left_intro {
   display: flex;
@@ -116,6 +116,10 @@
   font-weight: bold;
   margin-right: 5px;
 }
+.smaller_num {
+  font-weight: bold;
+  color: #0d1f2e;
+}
 .baby_pic {
   width: 100%;
   height: 15vh;
@@ -165,7 +169,7 @@
   border-radius: 52px;
 }
 .category_container {
-  width: 92%;
+  width: 92.5%;
   height: 25vh;
   background-color: #fcf4ec;
   border-radius: 20px;
@@ -202,7 +206,15 @@
   width: 150px;
   font-size: 12px;
   border-radius: 10px;
+  cursor: pointer;
 }
+
 .category_container .swiper-pagination-bullet {
   background: #a4c61f;
+}
+.kitchen {
+  margin-top: 250px;
+}
+.fresh_food {
+  margin-top: -170px;
 }
