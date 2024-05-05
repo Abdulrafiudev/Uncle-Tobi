@@ -1,0 +1,83 @@
+.footer_2_container {
+  width: 100%;
+  margin-top: 0px;
+  height: 50vh;
+  background-color: #a4c61f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.left_footer_2_sec {
+  display: flex;
+
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+
+  position: relative;
+}
+.right_footer_2_sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+}
+.footer_vegetable {
+  position: relative;
+  width: 120%;
+  height: auto;
+}
+.right_footer_2_span_1 {
+  color: white;
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+.right_footer_2_span_2 {
+  color: white;
+  font-size: 45px;
+  font-weight: 900;
+  margin-bottom: 15px;
+  margin-bottom: 30px;
+}
+.counter {
+  display: flex;
+  gap: 20px;
+}
+.days {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  gap: 25px;
+}
+.day_1,
+.day_2 {
+  background-color: #788087;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  margin-right: 5px;
+  padding: 15px;
+  text-align: center;
+}
+.time_prefix {
+  color: white;
+  text-align: center;
+  font-size: 8px;
+  font-weight: 700;
+}
+.right_footer_2_button {
+  margin-top: 30px;
+}
+.right_footer_2_button a {
+  background-color: #f5ffe2;
+  padding: 12px 20px;
+  border-radius: 52px;
+  color: #0d1f2e;
+  font-size: 12px;
+  cursor: pointer;
+}

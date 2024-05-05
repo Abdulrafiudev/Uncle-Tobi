@@ -15,6 +15,7 @@ import { top_product } from "../../component/products/cart"
 import { kitchen_products } from "../../component/products/cart"
 import { fresh_food } from "../../component/products/cart"
 import Footer_1 from "../../component/footer_1/footer_1"
+import Footer_2 from "../../component/footer_2/footer_2"
 
 function Home() {
   let items = [
@@ -145,6 +146,7 @@ function Home() {
         />
       </div>
       <Footer_1 />
+      <Footer_2 />
     </>
   )
 }
