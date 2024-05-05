@@ -45,6 +45,7 @@ li {
 
   align-items: center;
   gap: 18px;
+  justify-content: space-between;
 }
 .country_div {
   display: flex;
@@ -95,4 +96,5 @@ li {
   border-radius: 52px;
   border: 1px solid #a4c61f;
   cursor: pointer;
+  margin-right: 50px;
 }

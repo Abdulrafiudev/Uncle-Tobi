@@ -3,6 +3,7 @@ import "./footer_4.css"
 import { UilEnvelope } from "@iconscout/react-unicons"
 import Logo from "../../assets/images/logo.png"
 import { UilPhone } from "@iconscout/react-unicons"
+import { UilInstagram } from "@iconscout/react-unicons"
 
 function Footer_4() {
   return (
