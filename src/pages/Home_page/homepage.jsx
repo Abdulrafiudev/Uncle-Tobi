@@ -14,6 +14,7 @@ import Products from "../../component/products/products"
 import { top_product } from "../../component/products/cart"
 import { kitchen_products } from "../../component/products/cart"
 import { fresh_food } from "../../component/products/cart"
+import Footer_1 from "../../component/footer_1/footer_1"
 
 function Home() {
   let items = [
@@ -143,6 +144,7 @@ function Home() {
           see_all={"See All "}
         />
       </div>
+      <Footer_1 />
     </>
   )
 }
