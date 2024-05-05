@@ -28,7 +28,7 @@ function Products(props) {
           >
             {props.top_product.map((product, index) => {
               return (
-                <div className="product_container">
+                <div className="product_container" key={index}>
                   <div className="product_img_container">
                     <img src={product.image} className="product_img"></img>
                   </div>
@@ -45,9 +45,11 @@ function Products(props) {
                     <span className="product_price"> {product.price}</span>
                   </div>
                   <div className="label_container">
-                    {label.map(labell => {
+                    {label.map((labell, index) => {
                       return (
-                        <div className="label_background">{labell.name}</div>
+                        <div className="label_background" key={index}>
+                          {labell.name}
+                        </div>
                       )
                     })}
                   </div>

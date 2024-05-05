@@ -3,6 +3,7 @@ import "./search.css"
 import { UilShoppingCart } from "@iconscout/react-unicons"
 import { UilEnvelope } from "@iconscout/react-unicons"
 import { UilPhone } from "@iconscout/react-unicons"
+import search_cart from "../../pages/search_page/search_cart"
 
 function Search(props) {
   return (
@@ -14,6 +15,9 @@ function Search(props) {
             placeholder="Search for product"
             className="search_input"
             onChange={props.handle_change}
+            value={props.value}
+            onFocus={props.handle_focus}
+            onBlur={props.handle_blur}
           />
         </div>
         <div className="right_search">
@@ -35,11 +39,19 @@ function Search(props) {
       </div>
       {props.search_result && (
         <div className="search_result">
-          <span className="search_result_span_1">
-            {" "}
-            Showing Search result for Pepper{" "}
-          </span>
-          <span className="search_result_span_2"> 9 Products Found </span>
+          {props.value && (
+            <span className="search_result_span_1">
+              {" "}
+              Showing Search result for {props.value}{" "}
+            </span>
+          )}
+
+          {props.products_found > 0 && (
+            <span className="search_result_span_2">
+              {" "}
+              {props.products_found} Products Found{" "}
+            </span>
+          )}
         </div>
       )}
     </>
