@@ -4,6 +4,7 @@ import logo from "../../assets/images/logo.png"
 import cooking from "../../assets/images/cooking_items.png"
 import Logo from "./holding_array"
 import background from "../../assets/images/background.png"
+import { UilListUiAlt } from "@iconscout/react-unicons"
 
 function Holding() {
   let year = new Date().getFullYear()
@@ -14,7 +15,8 @@ function Holding() {
           <img src={logo} className="header_logo"></img>
         </div>
         <div className="right_header_section">
-          <button className="header_button"> stay informed </button>
+          <button className="header_button"> Stay Informed </button>
+          <UilListUiAlt className="menu_icon" />
         </div>
       </div>
       <div className="hero_container">
@@ -30,7 +32,7 @@ function Holding() {
               <br></br>
               we fully Launch
             </span>
-            <button className="hero_button"> Stay informed </button>
+            <button className="hero_button"> Stay Informed </button>
           </div>
           <div className="right_hero_section">
             <img src={cooking} className="cooking_items"></img>
@@ -40,15 +42,19 @@ function Holding() {
       <div className="brand">
         <span className="brand_span"> Our Brands and Products </span>
         <div className="brand_logo">
-          {Logo.map(images => {
+          {Logo.map((images, index) => {
             return (
               <img
                 className="brand_logo_images"
                 src={images.img}
+                key={index}
                 style={{
                   height: images.height,
                   width: images.width,
+                  marginRight: images.margin_right,
+                  marginLeft: images.margin_left,
                   cursor: "pointer",
+                  zIndex: 1,
                 }}
               ></img>
             )
