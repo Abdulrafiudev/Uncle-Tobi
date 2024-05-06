@@ -1,13 +1,46 @@
-import React from "react"
+import React, { useState } from "react"
 import "./holding_page.css"
 import logo from "../../assets/images/logo.png"
 import cooking from "../../assets/images/cooking_items.png"
 import Logo from "./holding_array"
 import background from "../../assets/images/background.png"
 import { UilListUiAlt } from "@iconscout/react-unicons"
+import axios from "axios"
 
 function Holding() {
-  let year = new Date().getFullYear()
+  //Sending the form data to the backend
+  let [form_data, set_form_data] = useState({
+    first_name: "",
+    last_name: "",
+    email_address: "",
+    country: "",
+    phone_number: "",
+  })
+
+  //Function to handle input change
+
+  function handle_change(event) {
+    let { name, value } = event.target
+    set_form_data(prev_value => {
+      return {
+        ...prev_value,
+        [name]: value,
+      }
+    })
+  }
+
+  // Function to handle form submission
+  async function handle_submit(event) {
+    event.preventDefault()
+    try {
+      let response = await axios.post(`backend_url`, form_data)
+      let data = response.data
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  //Dynamically getting the current year
+  let current_year = new Date().getFullYear()
   return (
     <>
       <div className="header">
@@ -63,31 +96,56 @@ function Holding() {
       </div>
       <div className="form_background">
         <img src={background} className="background_image"></img>
-        <form>
+        <form onSubmit={handle_submit}>
           <label className="form_heading">
             {" "}
             Be the First to Know When we Launch!
           </label>
           <div className="form_div">
             <label> First Name</label>
-            <input type="text" required />
+            <input
+              type="text"
+              name="first_name"
+              onChange={handle_change}
+              required
+            />
           </div>
           <div className="form_div">
             <label> Last Name</label>
-            <input type="text" required />
+            <input
+              type="text"
+              name="last_name"
+              onChange={handle_change}
+              required
+            />
           </div>
           <div className="form_div">
             <div className=""></div>
             <label> Email Address</label>
-            <input type="email" required />
+            <input
+              type="email"
+              name="email_address"
+              onChange={handle_change}
+              required
+            />
           </div>
           <div className="form_div">
             <label> Country </label>
-            <input type="text" required />
+            <input
+              type="text"
+              name="country"
+              onChange={handle_change}
+              required
+            />
           </div>
           <div className="form_div phone_div">
             <label> Phone Number</label>
-            <input type="number" required />
+            <input
+              type="number"
+              name="phone_number"
+              onChange={handle_change}
+              required
+            />
           </div>
           <div className="checkbox_div">
             <input type="checkbox" className="check" />
@@ -103,7 +161,10 @@ function Holding() {
         </form>
         <hr></hr>
         <div className="copyright_container">
-          <span className="copyright"> Copyright {year} UncleTobi.shop </span>
+          <span className="copyright">
+            {" "}
+            Copyright {current_year} UncleTobi.shop{" "}
+          </span>
         </div>
       </div>
     </>

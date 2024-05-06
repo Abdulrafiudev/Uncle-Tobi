@@ -70,6 +70,7 @@
   font-weight: 100;
   margin-top: 10px;
   font-size: 12px;
+  line-height: 18px;
 }
 .hero_button {
   background: #a4c61f;
@@ -212,7 +213,18 @@ hr {
   color: #0d1f2e;
   font-size: 14px;
 }
+@media (max-width: 900px) {
+  .form_background {
+    height: 88vh;
+  }
+  .hero_container {
+    height: 38vh;
+  }
+}
 @media (max-width: 600px) {
+  .hero_container {
+    height: 65vh;
+  }
   .left_header_section {
     margin-left: 10px;
   }
@@ -232,7 +244,7 @@ hr {
     width: 40%;
   }
   .right_hero_section {
-    width: 100%;
+    width: 60%;
   }
   .cooking_items {
     width: 100%;
