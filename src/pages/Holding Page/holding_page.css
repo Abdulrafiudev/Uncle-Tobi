@@ -288,3 +288,11 @@ hr {
     line-height: 23px;
   }
 }
+@media (max-width: 380px) {
+  .hero_container {
+    height: 60vh;
+  }
+  .hero_button {
+    margin-top: 16px;
+  }
+}
