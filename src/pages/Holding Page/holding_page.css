@@ -258,6 +258,9 @@ hr {
   }
   .span_2 {
     line-height: 18px;
+
+    white-space: pre;
+    font-size: 12px;
   }
   .brand {
     margin-top: 100px;
@@ -302,6 +305,7 @@ hr {
     width: 80%;
   }
   .span_2 {
-    white-space: nowrap;
+    white-space: pre;
+    font-size: 12px;
   }
 }
