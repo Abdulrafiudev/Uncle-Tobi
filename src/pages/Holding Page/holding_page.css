@@ -67,7 +67,7 @@
 }
 .span_2 {
   color: #fcf4eccc;
-  font-weight: 100;
+  font-weight: 400;
   margin-top: 10px;
   font-size: 12px;
   line-height: 18px;
@@ -112,8 +112,10 @@
   margin-bottom: 120px;
 }
 .brand_span {
-  font-weight: 200;
+  font-size: 20px;
+  font-weight: 400;
   text-align: center;
+  color: #0d1f2e;
 }
 .brand_logo {
   display: flex;
@@ -223,7 +225,7 @@ hr {
 }
 @media (max-width: 600px) {
   .hero_container {
-    height: 60vh;
+    height: 50vh;
   }
   .left_header_section {
     margin-left: 10px;
@@ -242,6 +244,9 @@ hr {
   .left_hero_section {
     margin-left: 20px;
     width: 40%;
+  }
+  .hero_button {
+    margin-top: 12px;
   }
   .right_hero_section {
     width: 60%;
