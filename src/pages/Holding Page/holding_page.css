@@ -223,7 +223,7 @@ hr {
 }
 @media (max-width: 600px) {
   .hero_container {
-    height: 65vh;
+    height: 60vh;
   }
   .left_header_section {
     margin-left: 10px;
@@ -257,12 +257,14 @@ hr {
   .brand {
     margin-top: 100px;
     width: 100%;
-    gap: 0px;
+    gap: 10px;
     margin-bottom: 50px;
   }
 
   .brand_logo {
-    gap: 0;
+    gap: 25px;
+    margin-left: 100px;
+    transform: scale(0.7);
   }
   .brand_logo_images {
     height: 10px;
