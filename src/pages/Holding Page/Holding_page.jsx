@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import "./holding_page.css"
 import logo from "../../assets/images/logo.png"
 import cooking from "../../assets/images/cooking_items.png"
+import vege from "../../assets/images/vege.png"
 import Logo from "./holding_array"
 import background from "../../assets/images/background.png"
 import { UilListUiAlt } from "@iconscout/react-unicons"
@@ -69,7 +70,11 @@ function Holding() {
             <button className="hero_button"> Stay Informed </button>
           </div>
           <div className="right_hero_section">
-            <img src={cooking} className="cooking_items"></img>
+            {isMobile ? (
+              <img src={vege} className="cooking_items"></img>
+            ) : (
+              <img src={cooking} className="cooking_items"></img>
+            )}
           </div>
         </div>
       </div>
