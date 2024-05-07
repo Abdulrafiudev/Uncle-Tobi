@@ -5,6 +5,7 @@ import cooking from "../../assets/images/cooking_items.png"
 import Logo from "./holding_array"
 import background from "../../assets/images/background.png"
 import { UilListUiAlt } from "@iconscout/react-unicons"
+import { isMobile } from "react-device-detect"
 import axios from "axios"
 
 function Holding() {

@@ -12,7 +12,7 @@
 .left_header_section {
   margin-left: 50px;
 
-  margin-top: 10px;
+  margin-top: 8px;
 }
 .header_logo {
   height: 40px;
@@ -237,7 +237,7 @@ hr {
   .right_header_section .menu_icon {
     display: block;
     color: #a4c61f;
-    transform: scale(1.6);
+    transform: scale(1.4);
   }
   .left_hero_section {
     margin-left: 20px;
