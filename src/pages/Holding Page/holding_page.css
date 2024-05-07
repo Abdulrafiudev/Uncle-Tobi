@@ -308,4 +308,8 @@ hr {
     white-space: pre;
     font-size: 12px;
   }
+  .span_1 {
+    white-space: nowrap;
+    line-height: 53px;
+  }
 }
