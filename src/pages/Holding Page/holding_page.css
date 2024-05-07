@@ -290,9 +290,18 @@ hr {
 }
 @media (max-width: 380px) {
   .hero_container {
-    height: 60vh;
+    height: 65vh;
   }
   .hero_button {
     margin-top: 16px;
+  }
+  .left_hero_section {
+    width: 20%;
+  }
+  .right_hero_section {
+    width: 80%;
+  }
+  .span_2 {
+    white-space: nowrap;
   }
 }
