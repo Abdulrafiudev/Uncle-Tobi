@@ -307,7 +307,6 @@ hr {
   .span_2 {
     white-space: pre;
     font-size: 12px;
-    overflow-x: hidden;
   }
   .span_1 {
     white-space: nowrap;

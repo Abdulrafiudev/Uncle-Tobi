@@ -1,3 +1,7 @@
 body {
   overflow-x: hidden;
 }
+.app_containe {
+  width: 100%;
+  overflow-x: hidden;
+}

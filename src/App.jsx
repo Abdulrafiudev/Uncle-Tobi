@@ -8,14 +8,16 @@ import Bulk_order from "./pages/request_page/bulk_order"
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Holding />} />
-          <Route path="/Home" element={<Home />} />
-          <Route path="/Search" element={<Search_page />} />
-          <Route path="/Order" element={<Bulk_order />} />
-        </Routes>
-      </BrowserRouter>
+      <div className="app_container">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Holding />} />
+            <Route path="/Home" element={<Home />} />
+            <Route path="/Search" element={<Search_page />} />
+            <Route path="/Order" element={<Bulk_order />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </>
   )
 }
