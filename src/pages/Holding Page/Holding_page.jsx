@@ -20,6 +20,7 @@ function Holding() {
     checked: "false",
   })
 
+  console.log(isMobile)
   //Function to handle input change
 
   function handle_change(event) {
@@ -67,11 +68,18 @@ function Holding() {
               We are <br></br> Cooking
               <br /> Something!{" "}
             </span>
-            <span className="span_2">
-              Our online food shop is lunching soon, Be the first to know when
-              <br></br>
-              we fully Launch
-            </span>
+            {isMobile ? (
+              <span className="span_2">
+                Our online food shop is lunching soon, Be the first to know{" "}
+                <br></br> when we fully Launch
+              </span>
+            ) : (
+              <span className="span_2">
+                Our online food shop is lunching soon, Be the first to know when{" "}
+                <br></br>we fully Launch
+              </span>
+            )}
+
             <button className="hero_button"> Stay Informed </button>
           </div>
           <div className="right_hero_section">
