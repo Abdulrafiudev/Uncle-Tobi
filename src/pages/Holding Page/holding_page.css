@@ -280,6 +280,7 @@ hr {
   .checkbox_div {
     display: none;
   }
+
   .form_main_button {
     margin-top: 10px;
   }
@@ -305,11 +306,21 @@ hr {
     width: 80%;
   }
   .span_2 {
-    white-space: pre;
+    white-space: nowrap;
     font-size: 12px;
   }
   .span_1 {
     white-space: nowrap;
     line-height: 53px;
+  }
+  @media (max-width: 320px) {
+    hr {
+      position: fixed;
+      bottom: 10px;
+    }
+    .copyright_container {
+      position: fixed;
+      bottom: -20px;
+    }
   }
 }
