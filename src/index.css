@@ -8,6 +8,7 @@
   src: url(./assets/font/Gotham\ Book.woff2);
 }
 body {
+  width: 100%;
   overflow-x: hidden;
 }
 @media (max-width: 600px) {
