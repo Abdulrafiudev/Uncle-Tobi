@@ -311,5 +311,6 @@ hr {
   .span_1 {
     white-space: nowrap;
     line-height: 53px;
+    overflow-x: hidden;
   }
 }
