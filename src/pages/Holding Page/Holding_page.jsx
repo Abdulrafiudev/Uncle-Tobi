@@ -17,6 +17,7 @@ function Holding() {
     email_address: "",
     country: "",
     phone_number: "",
+    checked: "false",
   })
 
   //Function to handle input change
@@ -27,6 +28,7 @@ function Holding() {
       return {
         ...prev_value,
         [name]: value,
+        checked: event.target.checked.toString(),
       }
     })
   }
@@ -35,10 +37,13 @@ function Holding() {
   async function handle_submit(event) {
     event.preventDefault()
     try {
-      let response = await axios.post(`backend_url`, form_data)
-      let data = response.data
-    } catch (error) {
-      console.log(error)
+      let response = await axios.post(
+        `https://sheet.best/api/sheets/b79ab269-5ead-490a-b91a-20c409a7e4fe`,
+        form_data
+      )
+      console.log(response.data)
+    } catch (err) {
+      console.log(`not sent`)
     }
   }
   //Dynamically getting the current year
@@ -154,7 +159,7 @@ function Holding() {
             />
           </div>
           <div className="checkbox_div">
-            <input type="checkbox" className="check" />
+            <input type="checkbox" className="check" onChange={handle_change} />
             <span> Send me regular newsletter and product updates</span>
           </div>
           <div className="form_button">
