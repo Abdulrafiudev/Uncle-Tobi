@@ -20,7 +20,6 @@ function Holding() {
     checked: "false",
   })
 
-  console.log(isMobile)
   //Function to handle input change
 
   function handle_change(event) {
@@ -45,6 +44,35 @@ function Holding() {
       console.log(response.data)
     } catch (err) {
       console.log(`not sent`)
+    }
+  }
+
+  //handling googlesheet submission with free API
+  async function handle_submit_2(event) {
+    event.preventDefault()
+
+    try {
+      let response = await axios.post(
+        `https://script.google.com/macros/s/AKfycbz34Y8iwAfqiEwQPbgNpv51RDNuVXxGzCqjnwQyKNaWe1CzVQdcjae0SbdQK6qfJ_i1WA/exec`,
+        form_data,
+        {
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+        }
+      )
+      set_form_data({
+        first_name: "",
+        last_name: "",
+        email_address: "",
+        country: "",
+        phone_number: "",
+        checked: "false",
+      })
+      console.log(`success`)
+      console.log(response.data)
+    } catch (err) {
+      console.error(`not sent`)
     }
   }
   //Dynamically getting the current year
@@ -115,7 +143,7 @@ function Holding() {
       </div>
       <div className="form_background">
         <img src={background} className="background_image"></img>
-        <form onSubmit={handle_submit}>
+        <form onSubmit={handle_submit_2}>
           <label className="form_heading">
             {" "}
             Be the First to Know When we Launch!
@@ -126,6 +154,7 @@ function Holding() {
               type="text"
               name="first_name"
               onChange={handle_change}
+              value={form_data.first_name}
               required
             />
           </div>
@@ -135,6 +164,7 @@ function Holding() {
               type="text"
               name="last_name"
               onChange={handle_change}
+              value={form_data.last_name_name}
               required
             />
           </div>
@@ -145,6 +175,7 @@ function Holding() {
               type="email"
               name="email_address"
               onChange={handle_change}
+              value={form_data.email_address}
               required
             />
           </div>
@@ -154,6 +185,7 @@ function Holding() {
               type="text"
               name="country"
               onChange={handle_change}
+              value={form_data.country}
               required
             />
           </div>
@@ -163,11 +195,17 @@ function Holding() {
               type="number"
               name="phone_number"
               onChange={handle_change}
+              value={form_data.phone_number}
               required
             />
           </div>
           <div className="checkbox_div">
-            <input type="checkbox" className="check" onChange={handle_change} />
+            <input
+              type="checkbox"
+              className="check"
+              onChange={handle_change}
+              value={form_data.checked}
+            />
             <span> Send me regular newsletter and product updates</span>
           </div>
           <div className="form_button">
