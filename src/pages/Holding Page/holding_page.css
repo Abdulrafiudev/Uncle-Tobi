@@ -160,7 +160,7 @@ label {
   font-weight: bold;
   font-size: 15px;
 }
-input {
+input, select {
   padding: 5px;
   border-radius: 8px;
   border: 1px solid #909090;

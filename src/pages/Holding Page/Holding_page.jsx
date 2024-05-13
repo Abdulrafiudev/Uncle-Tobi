@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import "./holding_page.css"
 import logo from "../../assets/images/logo.png"
 import cooking from "../../assets/images/cooking_items.png"
@@ -20,9 +20,29 @@ function Holding() {
     checked: "false",
   })
 
+  //Handling countries placeholder
+
+  let [placeholder, set_placeholder] = useState(``)
+
+  useEffect(() => {
+    ;(async () => {
+      try {
+        let response = await axios.get(
+          `https://restcountries.com/v3.1/name/${form_data.country}`
+        )
+        let country = response.data[0]
+        console.log(country.idd.root + country.idd.suffixes[0])
+        set_placeholder(country.idd.root + country.idd.suffixes[0])
+      } catch (err) {
+        console.log(`unable to fetch countries`)
+        set_placeholder(``)
+      }
+    })()
+  }, [form_data.country])
+
   //Function to handle input change
 
-  function handle_change(event) {
+  async function handle_change(event) {
     let { name, value } = event.target
     set_form_data(prev_value => {
       return {
@@ -185,6 +205,7 @@ function Holding() {
               type="text"
               name="country"
               onChange={handle_change}
+              className="input_phone_element"
               value={form_data.country}
               required
             />
@@ -195,6 +216,7 @@ function Holding() {
               type="number"
               name="phone_number"
               onChange={handle_change}
+              placeholder={placeholder}
               value={form_data.phone_number}
               required
             />
